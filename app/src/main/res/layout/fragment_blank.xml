@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="TitleStr"
+            type="String" />
+        <variable
+            name="DescStr"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        tools:context=".BlankFragment">
+
+
+        <EditText
+            android:id="@+id/edTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Title" />
+
+        <EditText
+            android:id="@+id/edDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Title" />
+
+        <Button
+            android:id="@+id/printBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Print" />
+
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{TitleStr,default=Title}"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{DescStr,default=Description}"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</layout>
